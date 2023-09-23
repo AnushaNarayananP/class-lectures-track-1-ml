@@ -4,7 +4,7 @@ class EbookSpider(scrapy.Spider):
     start_urls = ['https://books.toscrape.com/']
     def parse(self,response):
         print('[parse]')
-        response.css("a[title='Soumission']").get()
+        print(response.xpath('//h3/a/@title').get())
         
 
         
